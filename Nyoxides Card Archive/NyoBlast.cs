@@ -6,7 +6,7 @@ namespace Nyoxides_Card_Archive
 {
     class NyoBlastCreator
     {
-        public static void CreateCard(AllGameData allGameData)
+        public static CardDataBuilder CreateCard()
         {
             CardDataBuilder cardDataBuilder = new CardDataBuilder
             {
@@ -21,7 +21,7 @@ namespace Nyoxides_Card_Archive
                 "Assets/GameData/Cards/Portrait_Prefabs/CardArt_Spell_Awoken_Smite.prefab",
                 "c1ffdd3f20795fb46a210716ab0775fd"
             );
-            cardDataBuilder.SetCardClan(MTClan.Hellhorned, allGameData);
+            cardDataBuilder.SetCardClan(MTClan.Hellhorned);
             cardDataBuilder.AddToCardPool(MTCardPool.StandardPool);
 
             var damageEffectBuilder = new CardEffectDataBuilder
@@ -32,7 +32,7 @@ namespace Nyoxides_Card_Archive
             };
             cardDataBuilder.Effects.Add(damageEffectBuilder.Build());
             cardDataBuilder.Traits.Add(new CardTraitData{traitStateName = "CardTraitIgnoreArmor"});
-            cardDataBuilder.BuildAndRegister();
+            return cardDataBuilder;
         }
     }
 }
