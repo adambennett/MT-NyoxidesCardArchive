@@ -15,13 +15,13 @@ namespace Nyoxides_Card_Archive
                 Cost = 6,
                 OverrideDescriptionKey = "CardData_overrideDescriptionKey-ecb95717c140b89f-64f8b55236b461741b1feea18f971216-v2",
                 TargetsRoom = true,
-                Targetless = false
+                Targetless = false,
+                Clan = MTClan.Hellhorned
             };
             cardDataBuilder.CreateAndSetCardArtPrefabVariantRef(
                 "Assets/GameData/Cards/Portrait_Prefabs/CardArt_Spell_Awoken_Smite.prefab",
                 "c1ffdd3f20795fb46a210716ab0775fd"
             );
-            cardDataBuilder.SetCardClan(MTClan.Hellhorned);
             cardDataBuilder.AddToCardPool(MTCardPool.StandardPool);
 
             var damageEffectBuilder = new CardEffectDataBuilder
